@@ -1071,7 +1071,20 @@
   } catch(e) { downloads = null; }
   if(!downloads){
     btn.addEventListener('click', function(){
-      alert('Downloading is not available in this preview. Please view this page on claude.ai to download the resume.');
+      const b64 = document.getElementById('resumePdfData').getAttribute('data-b64');
+      const byteChars = atob(b64);
+      const byteNumbers = new Array(byteChars.length);
+      for (let i = 0; i < byteChars.length; i++) { byteNumbers[i] = byteChars.charCodeAt(i); }
+      const byteArray = new Uint8Array(byteNumbers);
+      const blob = new Blob([byteArray], {type: 'application/pdf'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Titus_Tito_Resume.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
     });
     return;
   }
