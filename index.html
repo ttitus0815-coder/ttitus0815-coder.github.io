@@ -406,6 +406,19 @@
     text-decoration:none;
   }
   .proj-link:hover{ color:#f0bd5f; }
+  .proj-actions{
+    display:flex; flex-wrap:wrap; align-items:center; gap:0.6rem 1.1rem;
+    padding-top:0.4rem;
+  }
+  .proj-btn{
+    display:inline-block;
+    background:var(--amber); color:var(--charcoal);
+    padding:0.6rem 1.1rem; border-radius:8px;
+    font-size:0.85rem; font-weight:700; text-decoration:none;
+    transition:transform 0.25s ease, background 0.25s ease;
+  }
+  .proj-btn:hover{ background:#f0bd5f; transform:translateY(-2px); }
+  .proj-file{ font-size:0.75rem; color:#a89e8c; }
 
   /* SVG icon strokes inside proj-art */
   .proj-art svg{ width:64px; height:64px; }
@@ -883,7 +896,11 @@
             <div class="stat"><div class="num">&lt;60s</div><div class="lbl">course completion time</div></div>
             <div class="stat"><div class="num">0</div><div class="lbl">load drops in final runs</div></div>
           </div>
-          <a class="proj-link" href="https://drive.google.com/file/d/11xKeY6lrdrx3F4XlpoziNA94OkOfdNrc/view?usp=sharing" target="_blank" rel="noopener noreferrer">See the full report &#8599;</a>
+          <div class="proj-actions">
+            <a class="proj-btn" href="assets/Line_Following_Robot_Report.pdf" download="Line_Following_Robot_Report.pdf">Download Report &#8595;</a>
+            <a class="proj-link" href="assets/Line_Following_Robot_Report.pdf" target="_blank" rel="noopener">Open in new tab &#8599;</a>
+            <span class="proj-file">PDF &middot; 5 pages</span>
+          </div>
         </div>
       </div>
 
@@ -901,7 +918,11 @@
             <div class="stat"><div class="num">0.001</div><div class="lbl">epsilon at best setting</div></div>
             <div class="stat"><div class="num">~500</div><div class="lbl">iterations to converge</div></div>
           </div>
-          <a class="proj-link" href="https://drive.google.com/file/d/1UZSZDafvO0rJlmeekIwYpb9WheLLhTKn/view?usp=sharing" target="_blank" rel="noopener noreferrer">See the full report &#8599;</a>
+          <div class="proj-actions">
+            <a class="proj-btn" href="assets/Heat_Distribution_Report.pdf" download="Heat_Distribution_Report.pdf">Download Report &#8595;</a>
+            <a class="proj-link" href="assets/Heat_Distribution_Report.pdf" target="_blank" rel="noopener">Open in new tab &#8599;</a>
+            <span class="proj-file">PDF &middot; 4 pages</span>
+          </div>
         </div>
       </div>
     </div>
