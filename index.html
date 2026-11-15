@@ -644,6 +644,9 @@
   }
   .work-org{ font-size:0.95rem; color:#cdd9c4; color:#e6dcc8; margin-bottom:0.5rem; }
   .work-meta{ font-size:0.82rem; color:#a89e8c; }
+  .work-points{ margin:0.8rem 0 0; padding-left:1.1rem; color:#e6dcc8; font-size:0.92rem; line-height:1.55; }
+  .work-points li + li{ margin-top:0.25rem; }
+  .work-points li::marker{ color:var(--amber); }
   .work-badge{
     justify-self:end;
     font-size:0.72rem; font-weight:700; text-transform:uppercase;
@@ -728,7 +731,7 @@
       <span class="eyebrow">Open to Summer 2027 internships</span>
       <h1>Titus Tito</h1>
       <h2>Human-Centered · Engineering Design</h2>
-      <p class="tagline">I am a sophomore at the University of Michigan-Dearborn. I study Human-Centered Engineering Design with a concentration in Electrical Engineering Design. I like building things that are easy for people to use, like controls, screens, and the spaces people work in. Going forward, I want to design things around the people who use them.</p>
+      <p class="tagline">I am a sophomore at the University of Michigan-Dearborn. I study Human-Centered Engineering Design with a concentration in Electrical Engineering Design. I like building things that are easy for people to use, like controls, screens, and the spaces people work in. I want to design things around the people who use them.</p>
       <div class="hero-ctas">
         <a href="#/contact" data-page="contact" class="btn btn-fill">Get in Touch</a>
         <a href="#/projects" data-page="projects" class="btn btn-line">See My Work</a>
@@ -784,6 +787,7 @@
         <span class="chip">Technical Drawing</span>
         <span class="chip">Adobe Illustrator</span>
         <span class="chip">Adobe Photoshop</span>
+        <span class="chip">Figma</span>
       </div>
     </div>
     <div class="skill-block">
@@ -792,7 +796,7 @@
         <span class="chip">MATLAB</span>
         <span class="chip">Arduino</span>
         <span class="chip">C / C++</span>
-        <span class="chip">Charts &amp; Graphs</span>
+        <span class="chip">Data Visualization</span>
       </div>
     </div>
     <div class="skill-block">
@@ -827,7 +831,11 @@
         <div>
           <div class="work-role">Cashier</div>
           <div class="work-org">Lowe's Companies, Inc. &middot; Part-time</div>
-          <div class="work-meta">Jul 2026 &ndash; Present &middot; On-site &middot; North America</div>
+          <div class="work-meta">Jul 2026 &ndash; Present &middot; Canton, MI</div>
+          <ul class="work-points">
+            <li>Ring up customers quickly and correctly in a busy store while staying friendly and helpful.</li>
+            <li>Answer customer questions about products and help with daily store tasks.</li>
+          </ul>
         </div>
         <div class="work-badge">Current</div>
       </div>
@@ -835,7 +843,11 @@
         <div>
           <div class="work-role">General Utility II (Cleaning)</div>
           <div class="work-org">The Henry Ford &middot; Seasonal</div>
-          <div class="work-meta">Apr 2026 &ndash; Jun 2026 &middot; On-site &middot; North America</div>
+          <div class="work-meta">Apr 2026 &ndash; Jun 2026 &middot; Dearborn, MI</div>
+          <ul class="work-points">
+            <li>Kept the museum and its exhibit areas clean and ready for large crowds of visitors.</li>
+            <li>Worked with my team to meet the museum's daily cleaning standards.</li>
+          </ul>
         </div>
         <div class="work-badge">Past</div>
       </div>
@@ -870,7 +882,6 @@
             <span class="chip">Technical Writing</span>
             <span class="chip">General Physics I &amp; Lab</span>
             <span class="chip">Calculus I</span>
-            <span class="chip">Anatomy &amp; Physiology for Engineers</span>
           </div>
         </div>
         <div class="edu-block">
@@ -880,15 +891,16 @@
             <span class="chip">Engineering Design Communication</span>
             <span class="chip">Digital Design</span>
             <span class="chip">Calculus II</span>
+            <span class="chip">Anatomy &amp; Physiology for Engineers</span>
           </div>
         </div>
         <div class="edu-block">
-          <div class="g">Targeting Winter 2027</div>
+          <div class="g">Registered for Winter 2027</div>
           <div class="chiprow">
-            <span class="chip">Needfinding &amp; Research Methods</span>
-            <span class="chip">Product Prototyping</span>
-            <span class="chip">Human Factors &amp; Ergonomics</span>
+            <span class="chip">Needfinding &amp; Research Methods in Design</span>
             <span class="chip">Circuits</span>
+            <span class="chip">Principles of Engineering Materials</span>
+            <span class="chip">Design Stress Analyses</span>
           </div>
         </div>
       </div>
@@ -904,7 +916,7 @@
   <div class="wrap">
     <div class="kicker">What I Have Built</div>
     <h2 class="sec-title">My Projects</h2>
-    <p class="proj-intro">Here are two team projects from my first semester and a mobile app I designed in Figma.</p>
+    <p class="proj-intro">Here are two team projects from my first semester and a mobile app I designed in Figma for my digital design class.</p>
 
     <div class="proj-grid">
       <div class="proj-card proj-card-wide">
@@ -961,7 +973,7 @@
         <div class="proj-body">
           <span class="proj-tag design">UI / UX Design</span>
           <div class="proj-title">Tito's Definitely Not Sketchy Bank</div>
-          <div class="proj-meta">Mobile app prototype &middot; Figma</div>
+          <div class="proj-meta">Fall 2026 &middot; ART 210 class project &middot; Figma</div>
           <p class="proj-desc">Tito's Bank is a joke banking app that I designed and prototyped in Figma. It has six connected screens: splash, login, home, send money, card, and account. Every screen uses the same margins, buttons, and bottom tab bar, so the app feels the same as you click through it. The jokes are in the words, like "Arrives in 3&ndash;5 business years" and "PIN: 1234 (obviously)." However, the layout and navigation follow how real banking apps work.</p>
           <div class="proj-stats">
             <div class="stat"><div class="num">6</div><div class="lbl">connected screens</div></div>
@@ -998,13 +1010,13 @@
         <div class="rdoc-header">
           <div class="rdoc-name">Titus Tito</div>
           <div class="rdoc-contact">Canton, MI &nbsp;|&nbsp; <a href="tel:+17346649408">(734) 664-9408</a> &nbsp;|&nbsp; <a href="mailto:ttitus@umich.edu">ttitus@umich.edu</a></div>
-          <div class="rdoc-link"><a href="https://www.linkedin.com/in/titus-tito-a75008399" target="_blank" rel="noopener noreferrer">linkedin.com/in/titus-tito-a75008399</a></div>
+          <div class="rdoc-link"><a href="https://www.linkedin.com/in/titus-tito-a75008399" target="_blank" rel="noopener noreferrer">linkedin.com/in/titus-tito-a75008399</a> &nbsp;|&nbsp; <a href="https://ttitus0815-coder.github.io">ttitus0815-coder.github.io</a></div>
         </div>
 
         <div class="rdoc-section">
           <div class="rdoc-h">Objective</div>
           <div class="rdoc-body">
-            <p>I am a sophomore at UM-Dearborn studying Human-Centered Engineering Design, with a concentration in Electrical Engineering Design. I am looking for a Summer 2027 internship in human factors, design research, or engineering design.</p>
+            <p>Sophomore in Human-Centered Engineering Design (Electrical Engineering Design concentration) at UM-Dearborn, looking for a Summer 2027 internship in human factors, design research, or engineering design.</p>
           </div>
         </div>
 
@@ -1014,10 +1026,10 @@
             <div class="rdoc-entry">
               <div class="rdoc-entry-head">
                 <span class="rdoc-role">University of Michigan-Dearborn</span>
-                <span class="rdoc-date">Dearborn, MI</span>
+                <span class="rdoc-date">Expected May 2029</span>
               </div>
               <div class="rdoc-sub">Bachelor of Science in Engineering, Human-Centered Engineering Design &nbsp;|&nbsp; Concentration: Electrical Engineering Design</div>
-              <p>GPA: 3.17 &nbsp;|&nbsp; Sophomore &nbsp;|&nbsp; Expected Graduation: 2029</p>
+              <p>GPA: 3.17 &nbsp;|&nbsp; Sophomore &nbsp;|&nbsp; Dearborn, MI</p>
             </div>
           </div>
         </div>
@@ -1025,44 +1037,9 @@
         <div class="rdoc-section">
           <div class="rdoc-h">Technical Skills</div>
           <div class="rdoc-body">
-            <div class="rdoc-skill-line"><b>Human-Centered Design:</b> Design Thinking, User Research, Charts &amp; Graphs, Teamwork</div>
-            <div class="rdoc-skill-line"><b>Design &amp; Engineering:</b> Fusion 360 (CAD &amp; Simulation), MATLAB, Arduino IDE, Building Test Circuits</div>
-            <div class="rdoc-skill-line"><b>Software:</b> Microsoft Office Suite (Word, Excel, PowerPoint)</div>
-          </div>
-        </div>
-
-        <div class="rdoc-section">
-          <div class="rdoc-h">Relevant Coursework</div>
-          <div class="rdoc-body">
-            <p>Intro to Engineering &amp; Design (ENGR 100) &middot; Design Thinking: Process, Methods &amp; Practice (ENGR 360) &middot; Engineering Design Communication (HCED 220) &middot; Technical Writing for Engineers (COMP 270) &middot; General Physics I &amp; Lab (PHYS 150/150L) &middot; Calculus I &amp; II (MATH 115/116) &middot; Anatomy &amp; Physiology for Engineers (BENG 200)</p>
-          </div>
-        </div>
-
-        <div class="rdoc-section">
-          <div class="rdoc-h">Work Experience</div>
-          <div class="rdoc-body">
-            <div class="rdoc-entry">
-              <div class="rdoc-entry-head">
-                <span class="rdoc-role">Cashier, Lowe's Companies, Inc.</span>
-                <span class="rdoc-date">Jul 2026 &ndash; Present</span>
-              </div>
-              <div class="rdoc-sub">Part-time &nbsp;|&nbsp; On-site</div>
-              <ul>
-                <li>Ring up customers quickly and correctly in a busy store while staying friendly and helpful.</li>
-                <li>Answer customer questions about products and help with daily store tasks.</li>
-              </ul>
-            </div>
-            <div class="rdoc-entry">
-              <div class="rdoc-entry-head">
-                <span class="rdoc-role">General Utility II (Cleaning), The Henry Ford</span>
-                <span class="rdoc-date">Apr 2026 &ndash; Jun 2026</span>
-              </div>
-              <div class="rdoc-sub">Seasonal &nbsp;|&nbsp; On-site</div>
-              <ul>
-                <li>Kept the museum and its exhibit areas clean and ready for large crowds of visitors.</li>
-                <li>Worked with my team to meet the museum's daily cleaning standards.</li>
-              </ul>
-            </div>
+            <div class="rdoc-skill-line"><b>Human-Centered Design:</b> Design Thinking, User Research, Data Visualization, UI Prototyping, Teamwork</div>
+            <div class="rdoc-skill-line"><b>Design &amp; Engineering:</b> Fusion 360 (CAD &amp; Simulation), 3D Printing, MATLAB, Arduino IDE, Circuit Prototyping</div>
+            <div class="rdoc-skill-line"><b>Software:</b> Figma, Adobe Illustrator, Adobe Photoshop, Microsoft Office Suite (Word, Excel, PowerPoint)</div>
           </div>
         </div>
 
@@ -1078,7 +1055,8 @@
               <ul>
                 <li>Designed and 3D printed a chassis in Fusion 360 that carried up to 250g without tipping.</li>
                 <li>Programmed the robot in Arduino IDE to follow a line on its own using two IR sensors.</li>
-                <li>Built, tested, and fixed the robot with my team over many rounds, and used MATLAB to study 10+ test runs. Our robot finished the track in under 60 seconds without dropping the load once.</li>
+                <li>Changed one variable at a time across 10 test runs and used MATLAB to compare the results.</li>
+                <li>Our robot finished the track in under 60 seconds without dropping the load once.</li>
               </ul>
             </div>
             <div class="rdoc-entry">
@@ -1089,10 +1067,56 @@
               <div class="rdoc-sub">Team Project, 4 members &nbsp;|&nbsp; MATLAB</div>
               <ul>
                 <li>Built a MATLAB program that finds the final temperature across a metal plate when each edge is held at a different temperature.</li>
-                <li>Tested 5 error limits (epsilon values) and different grid sizes to find the best balance between accuracy and speed.</li>
+                <li>Tested 5 error limits (epsilon values) and different grid sizes to find the best balance between accuracy and speed (best: 40 x 40 grid, error limit 0.001, about 500 iterations).</li>
                 <li>Made color maps that turn the numbers into a simple picture anyone can read.</li>
               </ul>
             </div>
+            <div class="rdoc-entry">
+              <div class="rdoc-entry-head">
+                <span class="rdoc-role">Tito's Bank: Mobile App Prototype</span>
+                <span class="rdoc-date">Fall 2026</span>
+              </div>
+              <div class="rdoc-sub">Class Project, ART 210: Beginning Digital Design &nbsp;|&nbsp; Figma</div>
+              <ul>
+                <li>Designed and prototyped a 6-screen banking app in Figma: splash, login, home, send money, card, and account.</li>
+                <li>Used the same margins, buttons, and bottom tab bar on every screen so the app feels consistent as you click through it.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="rdoc-section">
+          <div class="rdoc-h">Work Experience</div>
+          <div class="rdoc-body">
+            <div class="rdoc-entry">
+              <div class="rdoc-entry-head">
+                <span class="rdoc-role">Cashier, Lowe's Companies, Inc.</span>
+                <span class="rdoc-date">Jul 2026 &ndash; Present</span>
+              </div>
+              <div class="rdoc-sub">Part-time &nbsp;|&nbsp; Canton, MI</div>
+              <ul>
+                <li>Ring up customers quickly and correctly in a busy store while staying friendly and helpful.</li>
+                <li>Answer customer questions about products and help with daily store tasks.</li>
+              </ul>
+            </div>
+            <div class="rdoc-entry">
+              <div class="rdoc-entry-head">
+                <span class="rdoc-role">General Utility II (Cleaning), The Henry Ford</span>
+                <span class="rdoc-date">Apr 2026 &ndash; Jun 2026</span>
+              </div>
+              <div class="rdoc-sub">Seasonal &nbsp;|&nbsp; Dearborn, MI</div>
+              <ul>
+                <li>Kept the museum and its exhibit areas clean and ready for large crowds of visitors.</li>
+                <li>Worked with my team to meet the museum's daily cleaning standards.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="rdoc-section">
+          <div class="rdoc-h">Relevant Coursework</div>
+          <div class="rdoc-body">
+            <p>Design Thinking: Process, Methods &amp; Practice (ENGR 360) &middot; Engineering Design Communication (HCED 220) &middot; Beginning Digital Design (ART 210) &middot; Intro to Engineering &amp; Design (ENGR 100, A+) &middot; Technical Writing for Engineers (COMP 270, A) &middot; Anatomy &amp; Physiology for Engineers (BENG 200) &middot; General Physics I &amp; Lab (PHYS 150/150L) &middot; Calculus I &amp; II (MATH 115/116)</p>
           </div>
         </div>
       </div>
