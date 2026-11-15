@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Titus Tito · Human-Centered Engineering Design</title>
-<meta name="description" content="Titus Tito is a Human-Centered Engineering Design student at the University of Michigan-Dearborn, seeking a Summer 2027 internship in automotive UX, human factors, or HMI design.">
+<meta name="description" content="Titus Tito is a Human-Centered Engineering Design student at the University of Michigan-Dearborn looking for a Summer 2027 internship in automotive UX, human factors, or HMI design.">
 <meta name="author" content="Titus Tito">
 <meta name="theme-color" content="#f4ecdd">
 <link rel="canonical" href="https://ttitus0815-coder.github.io/">
@@ -420,6 +420,30 @@
   .proj-btn:hover{ background:#f0bd5f; transform:translateY(-2px); }
   .proj-file{ font-size:0.75rem; color:#a89e8c; }
 
+  /* Full-width card + phone-screen art (Figma project) */
+  .proj-card-full{ grid-column:1 / -1; }
+  .proj-art.phones{
+    height:300px;
+    justify-content:center; align-items:flex-start;
+    gap:1.2rem; padding:1.6rem 1.6rem 0;
+    background:linear-gradient(160deg, #2f4a3d 0%, #1c1712 85%);
+  }
+  .proj-art.phones img{
+    width:170px; height:100%; flex:0 0 auto;
+    object-fit:cover; object-position:top;
+    border-radius:18px 18px 0 0;
+    border:4px solid #0f0c09; border-bottom:0;
+    box-shadow:0 10px 30px rgba(0,0,0,0.45);
+    opacity:1;
+  }
+  .proj-art.phones img:first-child{ object-position:center 32%; }
+  .proj-tag.design{ background:rgba(110,160,135,0.2); color:#9fd1b6; }
+  .proj-btn-alt{
+    background:transparent; color:var(--amber);
+    border:1px solid var(--amber);
+  }
+  .proj-btn-alt:hover{ background:rgba(224,163,56,0.12); }
+
   /* SVG icon strokes inside proj-art */
   .proj-art svg{ width:64px; height:64px; }
 
@@ -471,6 +495,8 @@
     .about-grid{ grid-template-columns:1fr; }
     .edu-grid{ grid-template-columns:1fr; }
     .proj-grid{ grid-template-columns:1fr; }
+    .proj-art.phones{ height:240px; gap:0.7rem; padding:1.2rem 1rem 0; }
+    .proj-art.phones img{ width:31%; border-width:3px; border-radius:12px 12px 0 0; }
   }
 
   /* ---- PAGE ROUTING ---- */
@@ -702,7 +728,7 @@
       <span class="eyebrow">Open to Summer 2027 internships</span>
       <h1>Titus Tito</h1>
       <h2>Human-Centered · Engineering Design</h2>
-      <p class="tagline">I'm a sophomore at the University of Michigan-Dearborn, studying Human-Centered Engineering Design with a concentration in Electrical Engineering Design. I like building things that are easy for people to use, like car screens and controls. I want to design car interfaces for a living.</p>
+      <p class="tagline">I am a sophomore at the University of Michigan-Dearborn. I study Human-Centered Engineering Design with a concentration in Electrical Engineering Design. I like building things that are easy for people to use, like car screens and controls. Going forward, I want to design car interfaces for a living.</p>
       <div class="hero-ctas">
         <a href="#/contact" data-page="contact" class="btn btn-fill">Get in Touch</a>
         <a href="#/projects" data-page="projects" class="btn btn-line">See My Work</a>
@@ -729,9 +755,9 @@
     <h2 class="sec-title">Why I Do This</h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>I like the moment where machines meet people, a car dashboard, a button, a screen. It has to work well, and it has to be easy to use. My major is built around exactly that: Human-Centered Engineering Design, with a focus on Electrical Engineering.</p>
-        <p>Right now, I'm building robots and running computer simulations. Starting Winter 2027, I'll take classes on how to design for real people, not just build the system, but understand who uses it and why.</p>
-        <p>My goal is a job in automotive UX and human factors, designing the screens, buttons, and controls inside cars. I'd like to work at a car parts company close to home.</p>
+        <p>I like the places where people and machines meet. For example, a car dashboard, a button, or a touch screen all have to work well. However, they also have to be easy to use. My major is built around this idea. I study Human-Centered Engineering Design with a focus on Electrical Engineering.</p>
+        <p>Right now, I am building robots and running computer simulations. Starting in Winter 2027, I will take classes on how to design for real people. These classes are not just about building the system. They are about understanding who uses it and why.</p>
+        <p>My goal is a job in automotive UX and human factors. I want to design the screens, buttons, and controls inside cars. Ultimately, I would like to work at a car parts company close to home.</p>
       </div>
       <div class="about-photo-card">
         <img src="assets/titus-headshot.jpg" width="700" height="700" loading="lazy" decoding="async" alt="Titus Tito headshot">
@@ -825,10 +851,10 @@
     <h2 class="sec-title">Education</h2>
     <div class="edu-grid">
       <div>
-        <p>I'm working on a BSE in Human-Centered Engineering Design at the University of Michigan-Dearborn, with a concentration in Electrical Engineering Design. UM-Dearborn describes the major as a program that "bridges engineering design, art design, social sciences and business principles" to solve problems by understanding what people actually need before building a solution.</p>
+        <p>I am working on a BSE in Human-Centered Engineering Design at the University of Michigan-Dearborn, with a concentration in Electrical Engineering Design. UM-Dearborn says the major "bridges engineering design, art design, social sciences and business principles." This means it teaches you to find out what people actually need before you build something.</p>
         <p class="cite">Program description from UM-Dearborn's official course catalog. <a href="https://umdearborn.edu/academics/program/human-centered-engineering-design-bse" target="_blank" rel="noopener noreferrer">See the program page &#8599;</a></p>
-        <p>That mix of hands-on engineering and human-centered thinking is why I picked this major. It lets me build things, like the robot and the simulation on this site, while also learning the research and design process behind why a product works for the person using it.</p>
-        <p>I'm also working toward UM-Dearborn's accelerated 4+1 program, which would let me earn a BSE and an MS in Human-Centered Design and Engineering in five years instead of six.</p>
+        <p>I picked this major because it mixes hands-on engineering with thinking about people. For example, I get to build things like the robot and the simulation on this site. Furthermore, I learn the research and design steps that make a product work for the person using it.</p>
+        <p>I am also working toward UM-Dearborn's 4+1 program. It would let me earn a BSE and an MS in Human-Centered Design and Engineering in five years instead of six.</p>
       </div>
       <div class="edu-card-dark">
         <div class="school">UM-Dearborn</div>
@@ -876,9 +902,9 @@
 <div class="page" id="page-projects">
 <section class="projects" id="projects">
   <div class="wrap">
-    <div class="kicker">What I've Built</div>
+    <div class="kicker">What I Have Built</div>
     <h2 class="sec-title">My Projects</h2>
-    <p class="proj-intro">Two projects from my first semester, both built with a four person team.</p>
+    <p class="proj-intro">Here are two team projects from my first semester and a mobile app I designed in Figma.</p>
 
     <div class="proj-grid">
       <div class="proj-card proj-card-wide">
@@ -890,11 +916,11 @@
           <span class="proj-tag done">Done</span>
           <div class="proj-title">Line-Following Robot</div>
           <div class="proj-meta">Fall 2025 &middot; Team of 4 &middot; Fusion 360, Arduino, MATLAB</div>
-          <p class="proj-desc">A robot that follows a line on the floor while carrying a small weight on top. I designed the chassis in Fusion 360, then we 3D printed it and built the whole thing together as a team. Every part had to fit together, leave room for the wiring, and keep the robot balanced.</p>
+          <p class="proj-desc">My team and I built a robot that follows a line on the floor while carrying a small weight on top. I designed the chassis in Fusion 360. Then we 3D printed it and put the whole robot together as a team. Every part had to fit, leave room for the wiring, and keep the robot balanced.</p>
           <div class="proj-stats">
-            <div class="stat"><div class="num">250g</div><div class="lbl">load carried without tipping</div></div>
-            <div class="stat"><div class="num">&lt;60s</div><div class="lbl">course completion time</div></div>
-            <div class="stat"><div class="num">0</div><div class="lbl">load drops in final runs</div></div>
+            <div class="stat"><div class="num">250g</div><div class="lbl">weight carried without tipping</div></div>
+            <div class="stat"><div class="num">&lt;60s</div><div class="lbl">time to finish the course</div></div>
+            <div class="stat"><div class="num">0</div><div class="lbl">times the weight fell in final runs</div></div>
           </div>
           <div class="proj-actions">
             <a class="proj-btn" href="assets/Line_Following_Robot_Report.pdf" download="Line_Following_Robot_Report.pdf">Download Report &#8595;</a>
@@ -912,16 +938,40 @@
           <span class="proj-tag done">Done</span>
           <div class="proj-title">Heat Map Simulation</div>
           <div class="proj-meta">Fall 2025 &middot; Team of 4 &middot; MATLAB</div>
-          <p class="proj-desc">A MATLAB program that shows how heat moves across a metal plate with each edge held at a different temperature. It turns hard math into a simple color picture anyone can read. Red is hot, blue is cold.</p>
+          <p class="proj-desc">My team and I wrote a MATLAB program that shows how heat moves across a metal plate. Each edge of the plate is held at a different temperature. The program turns hard math into a simple color picture that anyone can read. Red is hot, and blue is cold.</p>
           <div class="proj-stats">
-            <div class="stat"><div class="num">40&times;40</div><div class="lbl">grid size, best accuracy</div></div>
-            <div class="stat"><div class="num">0.001</div><div class="lbl">epsilon at best setting</div></div>
-            <div class="stat"><div class="num">~500</div><div class="lbl">iterations to converge</div></div>
+            <div class="stat"><div class="num">40&times;40</div><div class="lbl">grid size with the best accuracy</div></div>
+            <div class="stat"><div class="num">0.001</div><div class="lbl">error limit (epsilon) at the best setting</div></div>
+            <div class="stat"><div class="num">~500</div><div class="lbl">loops to reach a final answer</div></div>
           </div>
           <div class="proj-actions">
             <a class="proj-btn" href="assets/Heat_Distribution_Report.pdf" download="Heat_Distribution_Report.pdf">Download Report &#8595;</a>
             <a class="proj-link" href="assets/Heat_Distribution_Report.pdf" target="_blank" rel="noopener">Open in new tab &#8599;</a>
             <span class="proj-file">PDF &middot; 4 pages</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card proj-card-full">
+        <div class="proj-art phones">
+          <img src="assets/bank-splash.jpg" width="393" height="852" loading="lazy" decoding="async" alt="Splash screen of Tito's Bank with logo and Get Started button">
+          <img src="assets/bank-home.jpg" width="393" height="852" loading="lazy" decoding="async" alt="Home screen showing a $1,000,000.00 balance and recent activity">
+          <img src="assets/bank-send.jpg" width="393" height="852" loading="lazy" decoding="async" alt="Send Money screen sending $250.00 to Tito">
+        </div>
+        <div class="proj-body">
+          <span class="proj-tag design">UI / UX Design</span>
+          <div class="proj-title">Tito's Definitely Not Sketchy Bank</div>
+          <div class="proj-meta">Mobile app prototype &middot; Figma</div>
+          <p class="proj-desc">Tito's Bank is a joke banking app that I designed and prototyped in Figma. It has six connected screens: splash, login, home, send money, card, and account. Every screen uses the same margins, buttons, and bottom tab bar, so the app feels the same as you click through it. The jokes are in the words, like "Arrives in 3&ndash;5 business years" and "PIN: 1234 (obviously)." However, the layout and navigation follow how real banking apps work.</p>
+          <div class="proj-stats">
+            <div class="stat"><div class="num">6</div><div class="lbl">connected screens</div></div>
+            <div class="stat"><div class="num">5</div><div class="lbl">tabs in the bottom bar</div></div>
+            <div class="stat"><div class="num">393&times;852</div><div class="lbl">iPhone screen size in Figma</div></div>
+          </div>
+          <div class="proj-actions">
+            <a class="proj-btn" href="https://www.figma.com/proto/Pms2EawVWB3RmUUgHhxIeY/Tito-s-Definitely-Not-Sketchy-Bank?page-id=0%3A1&amp;node-id=7-453&amp;starting-point-node-id=7%3A453&amp;scaling=scale-down&amp;content-scaling=fixed" target="_blank" rel="noopener">Try the Prototype &#8599;</a>
+            <a class="proj-btn proj-btn-alt" href="https://www.figma.com/design/Pms2EawVWB3RmUUgHhxIeY/Tito-s-Definitely-Not-Sketchy-Bank?node-id=0-1" target="_blank" rel="noopener">View Design File &#8599;</a>
+            <span class="proj-file">Opens in Figma</span>
           </div>
         </div>
       </div>
@@ -939,8 +989,8 @@
     <div class="resume-grid">
       <div class="resume-download-card">
         <div class="rd-label">PDF &middot; 1 page</div>
-        <div class="rd-title">Titus Tito &mdash; Resume</div>
-        <p class="rd-note">The exact resume below, as a downloadable PDF.</p>
+        <div class="rd-title">Titus Tito: Resume</div>
+        <p class="rd-note">This is the same resume shown below, as a PDF you can download.</p>
         <a href="assets/Titus_Tito_Resume.pdf" download="Titus_Tito_Resume.pdf" class="btn btn-fill resume-btn">Download Resume &#8595;</a>
         <a href="assets/Titus_Tito_Resume.pdf" target="_blank" rel="noopener" class="rd-open">or open it in a new tab &#8599;</a>
       </div>
@@ -954,7 +1004,7 @@
         <div class="rdoc-section">
           <div class="rdoc-h">Objective</div>
           <div class="rdoc-body">
-            <p>Sophomore Human-Centered Engineering Design student (Electrical Engineering Design concentration) at UM-Dearborn seeking a Summer 2027 internship in automotive UX, human factors, or HMI design.</p>
+            <p>I am a sophomore at UM-Dearborn studying Human-Centered Engineering Design, with a concentration in Electrical Engineering Design. I am looking for a Summer 2027 internship in automotive UX, human factors, or HMI design.</p>
           </div>
         </div>
 
@@ -966,7 +1016,7 @@
                 <span class="rdoc-role">University of Michigan-Dearborn</span>
                 <span class="rdoc-date">Dearborn, MI</span>
               </div>
-              <div class="rdoc-sub">Bachelor of Science in Engineering, Human-Centered Engineering Design &mdash; Concentration in Electrical Engineering Design</div>
+              <div class="rdoc-sub">Bachelor of Science in Engineering, Human-Centered Engineering Design &nbsp;|&nbsp; Concentration: Electrical Engineering Design</div>
               <p>GPA: 3.17 &nbsp;|&nbsp; Sophomore &nbsp;|&nbsp; Expected Graduation: 2029</p>
             </div>
           </div>
@@ -975,8 +1025,8 @@
         <div class="rdoc-section">
           <div class="rdoc-h">Technical Skills</div>
           <div class="rdoc-body">
-            <div class="rdoc-skill-line"><b>Human-Centered Design:</b> Design Thinking, User-Centered Research, Data Visualization, Cross-Functional Team Collaboration</div>
-            <div class="rdoc-skill-line"><b>Design &amp; Engineering:</b> Fusion 360 (CAD &amp; Simulation), MATLAB, Arduino IDE, Circuit Prototyping</div>
+            <div class="rdoc-skill-line"><b>Human-Centered Design:</b> Design Thinking, User Research, Charts &amp; Graphs, Teamwork</div>
+            <div class="rdoc-skill-line"><b>Design &amp; Engineering:</b> Fusion 360 (CAD &amp; Simulation), MATLAB, Arduino IDE, Building Test Circuits</div>
             <div class="rdoc-skill-line"><b>Software:</b> Microsoft Office Suite (Word, Excel, PowerPoint)</div>
           </div>
         </div>
@@ -993,24 +1043,24 @@
           <div class="rdoc-body">
             <div class="rdoc-entry">
               <div class="rdoc-entry-head">
-                <span class="rdoc-role">Cashier &mdash; Lowe's Companies, Inc.</span>
+                <span class="rdoc-role">Cashier, Lowe's Companies, Inc.</span>
                 <span class="rdoc-date">Jul 2026 &ndash; Present</span>
               </div>
               <div class="rdoc-sub">Part-time &nbsp;|&nbsp; On-site</div>
               <ul>
-                <li>Process customer transactions accurately in a fast-paced retail environment while providing reliable, friendly service.</li>
-                <li>Assist customers with product questions and support day-to-day store operations.</li>
+                <li>Ring up customers quickly and correctly in a busy store while staying friendly and helpful.</li>
+                <li>Answer customer questions about products and help with daily store tasks.</li>
               </ul>
             </div>
             <div class="rdoc-entry">
               <div class="rdoc-entry-head">
-                <span class="rdoc-role">General Utility II (Cleaning) &mdash; The Henry Ford</span>
+                <span class="rdoc-role">General Utility II (Cleaning), The Henry Ford</span>
                 <span class="rdoc-date">Apr 2026 &ndash; Jun 2026</span>
               </div>
               <div class="rdoc-sub">Seasonal &nbsp;|&nbsp; On-site</div>
               <ul>
-                <li>Maintained cleanliness and operational readiness of museum facilities and exhibit areas in a high-traffic public venue.</li>
-                <li>Worked reliably within a team to meet daily maintenance standards.</li>
+                <li>Kept the museum and its exhibit areas clean and ready for large crowds of visitors.</li>
+                <li>Worked with my team to meet the museum's daily cleaning standards.</li>
               </ul>
             </div>
           </div>
@@ -1021,13 +1071,14 @@
           <div class="rdoc-body">
             <div class="rdoc-entry">
               <div class="rdoc-entry-head">
-                <span class="rdoc-role">Autonomous Line-Following Robot with Load Balancing</span>
+                <span class="rdoc-role">Line-Following Robot That Carries a Load</span>
                 <span class="rdoc-date">Fall 2025</span>
               </div>
-              <div class="rdoc-sub">Team Project &mdash; 4 members &nbsp;|&nbsp; Fusion 360, Arduino IDE, IR Sensors, MATLAB</div>
+              <div class="rdoc-sub">Team Project, 4 members &nbsp;|&nbsp; Fusion 360, Arduino IDE, IR Sensors, MATLAB</div>
               <ul>
-                <li>Designed and 3D-printed a chassis in Fusion 360 that carried up to 250g without tipping; programmed autonomous line-following navigation in Arduino IDE using dual IR sensor feedback.</li>
-                <li>Collaborated within a 4-person team through iterative build-test-debug cycles, using MATLAB to analyze 10+ test runs; delivered a robot that completed the track in under 60 seconds with zero load drops.</li>
+                <li>Designed and 3D printed a chassis in Fusion 360 that carried up to 250g without tipping.</li>
+                <li>Programmed the robot in Arduino IDE to follow a line on its own using two IR sensors.</li>
+                <li>Built, tested, and fixed the robot with my team over many rounds, and used MATLAB to study 10+ test runs. Our robot finished the track in under 60 seconds without dropping the load once.</li>
               </ul>
             </div>
             <div class="rdoc-entry">
@@ -1035,10 +1086,11 @@
                 <span class="rdoc-role">Heat Distribution Simulation in MATLAB</span>
                 <span class="rdoc-date">Fall 2025</span>
               </div>
-              <div class="rdoc-sub">Team Project &mdash; 4 members &nbsp;|&nbsp; MATLAB</div>
+              <div class="rdoc-sub">Team Project, 4 members &nbsp;|&nbsp; MATLAB</div>
               <ul>
-                <li>Built a finite-difference heat conduction solver modeling steady-state temperature across a metal plate with variable edge conditions.</li>
-                <li>Benchmarked convergence across 5 epsilon values and grid sizes to optimize the accuracy/runtime trade-off, and built color-mapped visualizations translating numerical data into clear, readable insights.</li>
+                <li>Built a MATLAB program that finds the final temperature across a metal plate when each edge is held at a different temperature.</li>
+                <li>Tested 5 error limits (epsilon values) and different grid sizes to find the best balance between accuracy and speed.</li>
+                <li>Made color maps that turn the numbers into a simple picture anyone can read.</li>
               </ul>
             </div>
           </div>
@@ -1053,7 +1105,7 @@
   <div class="wrap">
     <div class="kicker">Let's Talk</div>
     <h2 class="sec-title">Get In Touch</h2>
-    <p>I'm looking for a Summer 2027 internship in automotive UX and human factors design. Feel free to reach out. I'd love to talk.</p>
+    <p>I am looking for a Summer 2027 internship in automotive UX and human factors design. If you have a question or an open spot on your team, please reach out. I would love to talk.</p>
     <div class="contact-links">
       <a href="mailto:ttitus@umich.edu"><span aria-hidden="true">✉</span> ttitus@umich.edu</a>
       <a href="tel:+17346649408"><span aria-hidden="true">☎</span> (734) 664-9408</a>
