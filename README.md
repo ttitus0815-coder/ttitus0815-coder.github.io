@@ -6,13 +6,15 @@ Personal portfolio site for Titus Tito, a Human-Centered Engineering Design stud
 
 ## What's on the site
 
-- **Home** — intro and quick facts
-- **About Me** — background, goals, and skills
-- **Work Experience** — current and past jobs
-- **Education** — degree, coursework, and the 4+1 program
-- **Projects** — line-following robot and MATLAB heat map simulation (each with its full report as a PDF download), plus Tito's Definitely Not Sketchy Bank, a Figma mobile app prototype from ART 210
-- **Resume** — full resume with a PDF download
-- **Contact** — email, phone, and LinkedIn
+- **Home**: intro, quick facts, and cards for each project
+- **Projects**: the line-following robot (live 3D model of the chassis, process pictures, and test results), the MATLAB heat map simulation, and Tito's Definitely Not Sketchy Bank, a Figma app from ART 210
+- **About**: why I chose Human-Centered Engineering Design, and my skills
+- **Experience**: education at UM-Dearborn (classes done, in progress, and coming up) and work history
+- **Resume**: the full resume with a PDF download
+- **Contact**: email, phone, LinkedIn, and the resume, with copy buttons
+
+Every page ends with a short contact section and a "Next" button to the following page.
+Old links like `#/work` and `#/education` still work and open the Experience page.
 
 ## How it's built
 
