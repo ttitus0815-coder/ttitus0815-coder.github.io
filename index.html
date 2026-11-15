@@ -421,6 +421,33 @@
   .proj-file{ font-size:0.75rem; color:#a89e8c; }
 
   /* Full-width card + phone-screen art (Figma project) */
+  /* 3D CAD viewer (robot chassis), shown in the right half of the robot card image */
+  .proj-art .cad-viewer{
+    position:relative; width:50%; height:100%; overflow:hidden;
+    background:#1c1712 url('assets/robot-chassis-render.jpg') center/cover no-repeat;
+    touch-action:none; cursor:grab;
+  }
+  .proj-art .cad-viewer.ready{ background:radial-gradient(circle at 50% 40%, #3d342a 0%, #221c16 70%, #1a1510 100%); }
+  .proj-art .cad-viewer:active{ cursor:grabbing; }
+  .cad-viewer canvas{ position:absolute; inset:0; display:block; width:100% !important; height:100% !important; }
+  .cad-label, .cad-hint, .cad-reset{ position:absolute; z-index:2; }
+  .cad-label{
+    top:0.6rem; left:0.7rem; pointer-events:none;
+    font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--amber); background:rgba(20,16,12,0.7); padding:0.22rem 0.55rem; border-radius:999px;
+  }
+  .cad-hint{
+    bottom:0.6rem; left:0.7rem; pointer-events:none;
+    font-size:0.68rem; color:#e6dcc8; background:rgba(20,16,12,0.7);
+    padding:0.22rem 0.55rem; border-radius:999px;
+  }
+  .cad-reset{
+    top:0.5rem; right:0.55rem; width:1.9rem; height:1.9rem; padding:0;
+    font:inherit; font-size:0.95rem; line-height:1; color:var(--amber);
+    background:rgba(20,16,12,0.7); border:1px solid rgba(224,163,56,0.55); border-radius:50%; cursor:pointer;
+  }
+  .cad-reset:hover{ background:rgba(224,163,56,0.18); }
+  .cad-viewer:not(.ready) .cad-reset{ display:none; }
   .proj-card-full{ grid-column:1 / -1; }
   .proj-art.phones{
     height:300px;
@@ -502,6 +529,13 @@
   /* ---- PAGE ROUTING ---- */
   .page{ display:none; }
   .page.active{ display:block; }
+
+  /* ---- Keep the footer at the bottom on short pages ---- */
+  body{ min-height:100vh; display:flex; flex-direction:column; }
+  main{ flex:1; display:flex; flex-direction:column; }
+  main > .page.active{ flex:1; display:flex; flex-direction:column; }
+  main > .page.active > section:last-child{ flex:1; }
+  main > #page-contact.active > section{ display:flex; flex-direction:column; justify-content:center; padding-bottom:6rem; }
   .nav-resume-btn{
     background:var(--rust); color:#fff8ec !important;
     padding:0.55rem 1.1rem; border-radius:8px;
@@ -916,18 +950,22 @@
   <div class="wrap">
     <div class="kicker">What I Have Built</div>
     <h2 class="sec-title">My Projects</h2>
-    <p class="proj-intro">Here are two team projects from my first semester and a mobile app I designed in Figma for my digital design class.</p>
+    <p class="proj-intro">Here are two team projects from my ENGR 100 class and a mobile app I designed in Figma for my digital design class.</p>
 
     <div class="proj-grid">
       <div class="proj-card proj-card-wide">
         <div class="proj-art split">
           <img src="assets/robot-finished.jpg" width="362" height="391" loading="lazy" decoding="async" alt="Finished line-following robot">
-          <img src="assets/robot-chassis-render.jpg" width="760" height="604" loading="lazy" decoding="async" alt="Fusion 360 render of the robot chassis">
+          <div class="cad-viewer" id="cadViewer" data-src="assets/chassis.stl" role="img" aria-label="Interactive 3D model of the robot chassis I designed in Fusion 360">
+            <span class="cad-label">3D model</span>
+            <span class="cad-hint">Loading 3D&hellip;</span>
+            <button class="cad-reset" type="button" title="Reset view" aria-label="Reset 3D view">&#8634;</button>
+          </div>
         </div>
         <div class="proj-body">
           <span class="proj-tag done">Done</span>
           <div class="proj-title">Line-Following Robot</div>
-          <div class="proj-meta">Fall 2025 &middot; Team of 4 &middot; Fusion 360, Arduino, MATLAB</div>
+          <div class="proj-meta">Fall 2025 &middot; ENGR 100 class project &middot; Team of 4 &middot; Fusion 360, Arduino, MATLAB</div>
           <p class="proj-desc">My team and I built a robot that follows a line on the floor while carrying a small weight on top. I designed the chassis in Fusion 360. Then we 3D printed it and put the whole robot together as a team. Every part had to fit, leave room for the wiring, and keep the robot balanced.</p>
           <div class="proj-stats">
             <div class="stat"><div class="num">250g</div><div class="lbl">weight carried without tipping</div></div>
@@ -949,7 +987,7 @@
         <div class="proj-body">
           <span class="proj-tag done">Done</span>
           <div class="proj-title">Heat Map Simulation</div>
-          <div class="proj-meta">Fall 2025 &middot; Team of 4 &middot; MATLAB</div>
+          <div class="proj-meta">Fall 2025 &middot; ENGR 100 class project &middot; Team of 4 &middot; MATLAB</div>
           <p class="proj-desc">My team and I wrote a MATLAB program that shows how heat moves across a metal plate. Each edge of the plate is held at a different temperature. The program turns hard math into a simple color picture that anyone can read. Red is hot, and blue is cold.</p>
           <div class="proj-stats">
             <div class="stat"><div class="num">40&times;40</div><div class="lbl">grid size with the best accuracy</div></div>
@@ -1051,7 +1089,7 @@
                 <span class="rdoc-role">Line-Following Robot That Carries a Load</span>
                 <span class="rdoc-date">Fall 2025</span>
               </div>
-              <div class="rdoc-sub">Team Project, 4 members &nbsp;|&nbsp; Fusion 360, Arduino IDE, IR Sensors, MATLAB</div>
+              <div class="rdoc-sub">Class Project, ENGR 100: Intro to Engineering &amp; Design, team of 4 &nbsp;|&nbsp; Fusion 360, Arduino IDE, IR Sensors, MATLAB</div>
               <ul>
                 <li>Designed and 3D printed a chassis in Fusion 360 that carried up to 250g without tipping.</li>
                 <li>Programmed the robot in Arduino IDE to follow a line on its own using two IR sensors.</li>
@@ -1064,7 +1102,7 @@
                 <span class="rdoc-role">Heat Distribution Simulation in MATLAB</span>
                 <span class="rdoc-date">Fall 2025</span>
               </div>
-              <div class="rdoc-sub">Team Project, 4 members &nbsp;|&nbsp; MATLAB</div>
+              <div class="rdoc-sub">Class Project, ENGR 100: Intro to Engineering &amp; Design, team of 4 &nbsp;|&nbsp; MATLAB</div>
               <ul>
                 <li>Built a MATLAB program that finds the final temperature across a metal plate when each edge is held at a different temperature.</li>
                 <li>Tested 5 error limits (epsilon values) and different grid sizes to find the best balance between accuracy and speed (best: 40 x 40 grid, error limit 0.001, about 500 iterations).</li>
@@ -1226,5 +1264,93 @@
 
 
 
+<script>
+/* 3D CAD viewer: loads Three.js and the chassis STL only when the viewer is on screen */
+(function(){
+  var box = document.getElementById('cadViewer');
+  if (!box) return;
+  var LIBS = window.CAD_LIBS || [
+    'https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js',
+    'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js',
+    'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js'
+  ];
+  var hint = box.querySelector('.cad-hint');
+  function setStatus(t){ hint.textContent = t; }
+  function loadScript(src){ return new Promise(function(res, rej){ var s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }
+
+  var started = false, visible = false, renderer, scene, camera, controls, home;
+  function start(){
+    if (started) return; started = true;
+    LIBS.reduce(function(p, src){ return p.then(function(){ return loadScript(src); }); }, Promise.resolve())
+      .then(init).catch(function(){ setStatus('Fusion 360 render'); });
+  }
+
+  function size(){
+    var w = box.clientWidth, h = box.clientHeight;
+    if (!w || !h || !renderer) return;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h; camera.updateProjectionMatrix();
+  }
+
+  function init(){
+    var T = window.THREE;
+    renderer = new T.WebGLRenderer({ antialias:true, alpha:true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.outputEncoding = T.sRGBEncoding;
+    box.insertBefore(renderer.domElement, box.firstChild);
+
+    scene = new T.Scene();
+    camera = new T.PerspectiveCamera(35, 1, 1, 5000);
+    scene.add(new T.HemisphereLight(0xfff4e6, 0x2b241d, 0.65));
+    var key = new T.DirectionalLight(0xffffff, 0.9); key.position.set(1, 1.6, 1.2); scene.add(key);
+    var fill = new T.DirectionalLight(0xffffff, 0.25); fill.position.set(-1, 0.4, 1.4); scene.add(fill);
+    var rim = new T.DirectionalLight(0xe0a338, 0.35); rim.position.set(-1.2, 0.6, -1); scene.add(rim);
+
+    controls = new T.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true; controls.dampingFactor = 0.08;
+    controls.enablePan = false;
+    controls.maxPolarAngle = Math.PI * 0.6;
+    controls.autoRotate = true; controls.autoRotateSpeed = 1.4;
+    controls.addEventListener('start', function(){ controls.autoRotate = false; });
+
+    size();
+    new ResizeObserver(size).observe(box);
+
+    new T.STLLoader().load(box.getAttribute('data-src'), function(geo){
+      geo.rotateX(-Math.PI / 2);          /* Fusion 360 exports Z-up; Three.js is Y-up */
+      geo.center();
+      geo.computeBoundingSphere();
+      var r = geo.boundingSphere.radius;
+      var mesh = new T.Mesh(geo, new T.MeshStandardMaterial({ color:0x737b86, metalness:0.2, roughness:0.5 }));
+      scene.add(mesh);
+      camera.near = r / 50; camera.far = r * 50; camera.updateProjectionMatrix();
+      var d = r / Math.sin(camera.fov * Math.PI / 360); if (camera.aspect < 1) d /= camera.aspect;
+      home = new T.Vector3(1.75, 1.1, 2.1).normalize().multiplyScalar(d * 0.9);
+      camera.position.copy(home);
+      controls.minDistance = r * 1.2; controls.maxDistance = d * 2.5;
+      controls.target.set(0, 0, 0); controls.update();
+      box.classList.add('ready'); setStatus('Drag to rotate');
+    }, function(e){
+      if (e.lengthComputable) setStatus('Loading 3D\u2026 ' + Math.round(e.loaded / e.total * 100) + '%');
+    }, function(){ setStatus('Fusion 360 render'); });
+
+    box.querySelector('.cad-reset').addEventListener('click', function(){
+      if (!home) return;
+      camera.position.copy(home); controls.target.set(0, 0, 0); controls.autoRotate = true; controls.update();
+    });
+
+    (function loop(){
+      requestAnimationFrame(loop);
+      if (!visible) return;
+      controls.update(); renderer.render(scene, camera);
+    })();
+  }
+
+  new IntersectionObserver(function(entries){
+    visible = entries.some(function(e){ return e.isIntersecting; });
+    if (visible){ start(); size(); }
+  }, { rootMargin:'200px' }).observe(box);
+})();
+</script>
 </body>
 </html>
