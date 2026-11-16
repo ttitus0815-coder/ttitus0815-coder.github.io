@@ -46,8 +46,6 @@
   /* ---------- Header and menu ---------- */
   .site-header{ background:#1c1712; border-bottom:1px solid rgba(255,255,255,0.08); }
   .site-nav{ max-width:1180px; margin:0 auto; padding:12px 32px; display:flex; flex-wrap:wrap; align-items:center; gap:8px 36px; }
-  .wordmark{ font-family:'Anton',Impact,sans-serif; font-size:22px; text-transform:uppercase; color:#fff8ec; text-decoration:none; padding:10px 0; }
-  .wordmark:hover{ color:#e0a338; }
   .nav-links{ flex:1; display:flex; flex-wrap:wrap; align-items:center; gap:4px 30px; font-size:15px; font-weight:600; }
   .nav-links a{ color:#cfc4ae; text-decoration:none; padding:14px 0; border-bottom:2px solid transparent; }
   .nav-links a:hover{ color:#fff8ec; }
@@ -57,8 +55,7 @@
   .nav-links .nav-cta[aria-current="page"]{ color:#221d17; outline:2px solid #fff8ec; outline-offset:3px; }
   @media (min-width:701px){ .site-header{ position:sticky; top:0; z-index:50; } }
   @media (max-width:700px){
-    .site-nav{ padding:6px 16px 12px; gap:0; }
-    .wordmark{ font-size:20px; }
+    .site-nav{ padding:12px 16px; gap:0; }
     .nav-links{ flex:1 1 100%; display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; }
     .nav-links a{ display:flex; align-items:center; justify-content:center; min-height:44px; padding:0; border-radius:8px; background:rgba(255,255,255,0.06); border-bottom:0; color:#efe6d6; font-size:14px; }
     .nav-links a[aria-current="page"]{ background:rgba(224,163,56,0.18); color:#e0a338; }
@@ -98,10 +95,10 @@
 
 <header class="site-header" id="top">
   <nav class="site-nav" aria-label="Main">
-    <a class="wordmark" href="#/home" data-page="home">Titus Tito</a>
     <div class="nav-links">
-      <a href="#/projects" data-page="projects">Projects</a>
+      <a href="#/home" data-page="home">Home</a>
       <a href="#/about" data-page="about">About</a>
+      <a href="#/projects" data-page="projects">Projects</a>
       <a href="#/experience" data-page="experience">Experience</a>
       <a href="#/resume" data-page="resume">Resume</a>
       <a class="nav-cta" href="#/contact" data-page="contact">Contact</a>
@@ -212,8 +209,8 @@
         </div>
       </div>
       <div style="margin-top: 40px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;">
-        <a href="#/projects" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border: 1px solid rgba(224,163,56,0.5); border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 700;" data-page="projects">Next: Projects <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
+        <a href="#/about" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border: 1px solid rgba(224,163,56,0.5); border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 700;" data-page="about">Next: About <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/home" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="home">Home</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
       </div>
     </div>
   </footer>
@@ -383,8 +380,8 @@
         </div>
       </div>
       <div style="margin-top: 40px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;">
-        <a href="#/about" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border: 1px solid rgba(224,163,56,0.5); border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 700;" data-page="about">Next: About <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
+        <a href="#/experience" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border: 1px solid rgba(224,163,56,0.5); border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 700;" data-page="experience">Next: Experience <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/home" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="home">Home</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
       </div>
     </div>
   </footer>
@@ -476,8 +473,8 @@
         </div>
       </div>
       <div style="margin-top: 40px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;">
-        <a href="#/experience" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border: 1px solid rgba(224,163,56,0.5); border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 700;" data-page="experience">Next: Experience <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
+        <a href="#/projects" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border: 1px solid rgba(224,163,56,0.5); border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 700;" data-page="projects">Next: Projects <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/home" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="home">Home</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
       </div>
     </div>
   </footer>
@@ -589,7 +586,7 @@
       </div>
       <div style="margin-top: 40px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;">
         <a href="#/resume" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border: 1px solid rgba(224,163,56,0.5); border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 700;" data-page="resume">Next: Resume <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/home" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="home">Home</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
       </div>
     </div>
   </footer>
@@ -716,7 +713,7 @@
       </div>
       <div style="margin-top: 40px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;">
         <a href="#/contact" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border: 1px solid rgba(224,163,56,0.5); border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 700;" data-page="contact">Next: Contact <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/home" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="home">Home</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
       </div>
     </div>
   </footer>
@@ -761,7 +758,7 @@
   <footer style="border-top: 1px solid rgba(255,255,255,0.08); padding: 28px 32px;">
     <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px;">
       <a href="#/projects" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border: 1px solid rgba(224,163,56,0.5); border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 700;" data-page="projects">See my projects <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 13px; color: #a89e8c;"><nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600;"><a href="#/home" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="home">Home</a><a href="#/about" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="about">About</a><a href="#/projects" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="projects">Projects</a><a href="#/experience" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="experience">Experience</a><a href="#/resume" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="resume">Resume</a><a href="#/contact" style="color: #efe6d6; text-decoration: none; padding: 12px 0;" data-page="contact">Contact</a></nav><span>© 2026 Titus Tito, Canton, Michigan</span><a href="#top" style="text-decoration: none; padding: 12px 0;" data-top>Back to top</a></div>
     </div>
   </footer>
 </div>
@@ -796,7 +793,7 @@
     var el = document.getElementById('page-' + r.page);
     document.querySelectorAll('.page').forEach(function(p){ p.hidden = (p !== el); });
     document.querySelectorAll('.site-nav [data-page]').forEach(function(a){
-      if (a.getAttribute('data-page') === r.page && r.page !== 'home') a.setAttribute('aria-current','page');
+      if (a.getAttribute('data-page') === r.page) a.setAttribute('aria-current','page');
       else a.removeAttribute('aria-current');
     });
     document.title = el.getAttribute('data-title');
@@ -821,7 +818,7 @@
     if (a.hasAttribute('data-top')){
       e.preventDefault();
       window.scrollTo({ top:0, behavior: reduce ? 'auto' : 'smooth' });
-      document.querySelector('.wordmark').focus({ preventScroll:true });
+      document.querySelector('.nav-links a').focus({ preventScroll:true });
       return;
     }
     if (a.classList.contains('skip-link')){
